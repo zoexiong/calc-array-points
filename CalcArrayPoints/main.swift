@@ -51,13 +51,53 @@ func mathOperation(left: Int, right: Int, operation: (Int, Int) -> Int) -> Int {
 }
 // why the labels "left:" and "right:" are not needed here?
 
-let addGenericResult = mathOperation(left: 4, right: 5, operation: add)
-print(addGenericResult)
+//let addGenericResult = mathOperation(left: 4, right: 5, operation: add)
+//print(addGenericResult)
+
+
+
 
 //Array
+let testArray = [1,2,3,4,5]
+
+func add(array:[Int]) -> Int {
+let result = array.reduce(0,+)
+    return result
+}
+
+func multiply(array:[Int]) -> Int{
+return array.reduce(1,*)
+}
+
+func count(array:[Int]) -> Int {
+    return array.reduce(0){$0+$1*0+1}
+}
+
+func average(array:[Int]) -> Int {
+    let count = array.count
+    return array.reduce(0,+)/count
+}
+//why use reduce to count(in the unit test)? It's more complicated
+
+func reduce(array: [Int], operation: ([Int]) -> (Int)) -> Int {
+    return operation(array)
+}
+
+print(count(array:testArray))
+print(average(array:testArray))
+
+//let addResult = add(array: testArray)
+//print(addResult)
+
+//let addResultGeneric = reduce(array: testArray, operation: multiply)
+//print(addResultGeneric)
+
+//let multiplyResult = multiply(array: testArray)
+//print(multiplyResult)
 
 
 
 
+//Points
 
 
