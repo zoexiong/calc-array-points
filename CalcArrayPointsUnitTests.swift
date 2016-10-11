@@ -100,7 +100,7 @@ class CalcArrayPointsUnitTests: XCTestCase {
                 "y" : 4.5
         ]
         
-        let addPointResult = add(p1: testPoint1, p2: testPoint2)
+        let addPointResult = add(p1: testPoint1, p2: testPoint2)
         XCTAssert(addPointResult.0 == 7 && addPointResult.1 == 10)
         
         let subtractPointResult = subtract(p1: testPoint1, p2: testPoint2)
